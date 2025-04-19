@@ -1,0 +1,5 @@
+CodeTemplateGenerator.sln
+.idea/
+cppTemplateGenerator/bin/
+cppTemplateGenerator/nupkg/
+cppTemplateGenerator/obj/
