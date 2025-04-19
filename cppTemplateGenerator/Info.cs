@@ -19,9 +19,9 @@ public class Info
 	public static string Email { get; } = "eMail@domain.com";
 	
 	/**
-	 * @brief The date of the author
+	 * @brief The date
 	 */
-	public static string Date{ get; } = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss");
+	public static string Date{ get; } = DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss zzz");
 
 	/* endregion */
 }
