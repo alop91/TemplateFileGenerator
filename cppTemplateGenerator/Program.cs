@@ -36,7 +36,6 @@ class Program
 		 //Each argument is a file
 		 for(int i = 0; i < Program._relativeArgument.Count; i++)
 		 {	
-			
 			 //Check if the file has a path
 			 string fileDirectory = Path.GetDirectoryName(_relativeArgument[i]);
 			 if (fileDirectory == null)
@@ -48,18 +47,17 @@ class Program
 			 //Check if the first argument is a slash or a backslash
 			 if (fileDirectory.StartsWith('/') || fileDirectory.StartsWith('\\'))
 			 {
-				 // Salva il colore corrente
+				 // Save the original color
 				 ConsoleColor originalColor = Console.ForegroundColor;
     
-				 // Imposta il colore giallo per il warning
+				 // Set the color to yellow to indicate a warning
 				 Console.ForegroundColor = ConsoleColor.Yellow;
     
-				 // Stampa il messaggio di warning con un prefisso
-				 Console.WriteLine($"WARNING: The path " + fileDirectory + " is an absolute path. It will be replaced by a relative path.");
+				 // print the warning
+				 Console.WriteLine($"WARNING: The path " + fileDirectory + " it will be considered a relative path. To indicate an absolute path don't start with a slash or backslash.");
     
-				 // Ripristina il colore originale
+				 // Reset the color
 				 Console.ForegroundColor = originalColor;
-				 System.Diagnostics.Trace.TraceWarning("The path " + fileDirectory + " is an absolute path. It will be replaced by a relative path.");
 				 
 				 //Remove the initial backslash to avoid absolute paths
 				 fileDirectory = fileDirectory.TrimStart('/', '\\');;
@@ -77,7 +75,7 @@ class Program
 		    
 		    //Initialize the nameSpace
 		    string[] nameSpace = new string[0];
-		    ;
+		    
 		    //Get the nameSpace
 		    Program._handleNameSpace(out nameSpace);
 		    
@@ -103,9 +101,7 @@ class Program
 		 	 	Console.WriteLine($"Error the file creation: {ex.Message}");
 		 	 	
 		 	}
-			
 		}
-		
 	}
 
 	private static void _handleNameSpace(out string[] nameSpace)
