@@ -1,9 +1,8 @@
 ﻿global using System;
 global using System.IO;
 global using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
-namespace ConsoleApp1;
+namespace cppTemplateGenerator;
 
 class Program
 {

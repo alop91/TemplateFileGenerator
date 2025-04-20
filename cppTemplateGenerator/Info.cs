@@ -1,4 +1,4 @@
-namespace ConsoleApp1;
+namespace cppTemplateGenerator;
 
 /**
  * @brief This class contains all the information about the author
