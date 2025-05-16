@@ -91,9 +91,9 @@ class Program
 		 	 try
 		 	 {
 		 	 	//Create txt file 
-		 	 	File.WriteAllText(filePath + "\\" + fileName, content);
+		 	 	File.WriteAllText(filePath + "/" + fileName, content);
 			    
-			    Console.WriteLine($"Created new file at " + filePath + "\\" + fileName);
+			    Console.WriteLine($"Created new file at " + filePath + "/" + fileName);
 		 	 }
 		 	 catch (Exception ex)
 		 	 {
