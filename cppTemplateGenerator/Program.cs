@@ -37,6 +37,7 @@ class Program
 		 {	
 			 //Check if the file has a path
 			 string fileDirectory = Path.GetDirectoryName(_relativeArgument[i]);
+			 
 			 if (fileDirectory == null)
 			 {
 				 //No, then the file is in the current directory
